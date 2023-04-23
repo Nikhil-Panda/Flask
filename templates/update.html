@@ -1,0 +1,19 @@
+<!-- inherits from base html all the properties and no need to change it everytime.-->
+{% extends 'base.html' %}
+
+<!-- changes to the head-->
+{% block head %}
+<title>UPDATE THE TASK</title>
+{% endblock %}
+
+<!--changes to the body block!-->
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Update Task</h1>
+
+    <form action="/update/{{task_update.id}}" method="POST">
+        <input type="text" name="content" id="content" value="{{task_update.content}}">
+        <input type="submit" value="Update Task">
+    </form>
+</div>
+{% endblock %}

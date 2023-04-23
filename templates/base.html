@@ -1,0 +1,20 @@
+<!-- Creating a template inheritance -->
+<!-- makes it easier to only write code for relevant parts 
+no need to write all the meta lines againa nd again-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", inital-scale="1.0">
+    <meta http-equiv="X-UA-Compatible", content="ie-edge">
+
+    <!--linking the css to the page-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    {% block head %}{% endblock %}
+    <!-- creating blocks where changes can be added (head block)-->
+
+</head>
+<body>
+    {% block body %}{% endblock %}
+</body>
+</html>
